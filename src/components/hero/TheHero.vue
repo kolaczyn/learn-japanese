@@ -1,0 +1,56 @@
+<template>
+  <base-container>
+    <div class="hero-wrapper">
+      <section class="intro">
+        <h1>Improve your <strong>Japanese</strong></h1>
+        <p>
+          Gradually increase your knowledge of the japanese vocabulary with
+          <strong>Moshiro</strong>.
+        </p>
+        <div class="btns-wrapper">
+          <base-button class="btn--primary btn--big sign-up"
+            >Sign Up</base-button
+          >
+          <base-button class="btn--secondary btn--big learn-more"
+            >Learn More</base-button
+          >
+        </div>
+      </section>
+      <img src="../../assets/hero.svg" alt="Person looking at a giant phone" class="hero-img" />
+    </div>
+  </base-container>
+</template>
+
+<style lang="scss" scoped>
+.hero-wrapper {
+  margin-top: 5rem;
+  position: relative;
+  min-height: 75vh;
+}
+.hero-img {
+  height: 88%;
+  transform: scaleX(-1);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+h1 {
+  font-weight: bold;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+p {
+  line-height: 1.3;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  width: 635px;
+  display: inline-block;
+}
+.btns-wrapper {
+  font-size: 2rem;
+}
+.sign-up {
+  margin-right: 1.5rem;
+}
+</style>
