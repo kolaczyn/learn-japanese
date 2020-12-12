@@ -34,6 +34,7 @@ body {
   --clr-primary: #ff7979;
   --clr-primary-dark: #e96262;
   --clr-txt: #130f40;
+  --clr-txt-muted: #6a6a6a;
 
   background-color: var(--clr-bgr-dark);
   color: var(--clr-txt);
