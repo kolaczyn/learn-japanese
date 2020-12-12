@@ -13,7 +13,7 @@
             lot of anime.
           </p>
         </section>
-        <img src="../assets/gradually.svg" alt="Person studying" />
+        <img src="../../assets/gradually.svg" alt="Person studying" />
       </div>
       <div class="two-columns never-forget">
         <section>
@@ -26,7 +26,7 @@
             We show you the same word many times over a long period of time.
           </p>
         </section>
-        <img src="../assets/forget.svg" alt="Thinking man" />
+        <img src="../../assets/forget.svg" alt="Thinking man" />
       </div>
     </base-container>
   </div>

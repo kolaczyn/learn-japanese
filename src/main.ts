@@ -1,11 +1,14 @@
 import { createApp } from 'vue';
+
 import App from './App.vue';
+import router from './router';
 
 import BaseButton from './components/UI/BaseButton.vue';
 import BaseContainer from './components/UI/BaseContainer.vue';
 import BaseIconDesc from './components/UI/BaseIconDesc.vue';
 
 const app = createApp(App);
+app.use(router);
 
 app.component('base-button', BaseButton);
 app.component('base-container', BaseContainer);

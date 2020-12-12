@@ -1,24 +1,17 @@
 <template>
   <the-navbar></the-navbar>
-  <main>
-    <the-hero></the-hero>
-    <ilustrations-section></ilustrations-section>
-    <icons-section></icons-section>
-  </main>
+<router-view>
+
+</router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TheNavbar from './components/navbar/TheNavbar.vue';
-import TheHero from './components/hero/TheHero.vue';
-import IlustrationsSection from './components/IlustrationsSection.vue';
-import IconsSection from './components/IconsSection.vue';
 
 export default defineComponent({
   name: 'App',
-  components: {
-    IlustrationsSection, TheNavbar, TheHero, IconsSection,
-  },
+  components: { TheNavbar },
 });
 </script>
 

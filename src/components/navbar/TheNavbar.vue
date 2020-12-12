@@ -1,17 +1,22 @@
 <template>
-<base-container>
-  <header>
-    <a href="/" class="logo">Moshiro</a>
-    <nav>
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="">Pricing</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><base-button class="btn--primary btn--big">Sign Up</base-button></li>
-      </ul>
-    </nav>
-  </header>
-</base-container>
+  <base-container>
+    <header>
+      <!-- I have no idea why the logo is not aligned and has a weird 'hitbox' in the dev tools -->
+      <base-button link mode="logo" to="/">Moshiro</base-button>
+      <nav>
+        <ul>
+          <li><router-link to="/">About</router-link></li>
+          <li><router-link to="/">Pricing</router-link></li>
+          <li><router-link to="/">Contact</router-link></li>
+          <li>
+            <base-button link mode="secondary" to="/log-in"
+              >Log In
+            </base-button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </base-container>
 </template>
 
 <style lang="scss" scoped>
@@ -21,26 +26,13 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-.logo {
-  padding-top: 1rem;
-  padding-right: 2rem;
-  padding-bottom: 1rem;
-  color: var(--clr-primary-dark);
-  font-weight: bold;
-  font-size: 3rem;
-  transition: color 225ms ease;
-    &:hover{
-      color: var(--clr-primary);
-    }
-}
 nav {
   font-weight: medium;
   font-size: 2rem;
   ul {
     display: flex;
 
-    li:not(:last-child)
-    {
+    li:not(:last-child) {
       margin-right: 2rem;
     }
   }

@@ -4,15 +4,13 @@
       <section class="intro">
         <h1>Improve your <strong>Japanese</strong></h1>
         <p>
-          Gradually increase your knowledge of the japanese vocabulary with
+          Gradually increase your knowledge of the Japanese vocabulary with
           <strong>Moshiro</strong>.
         </p>
         <div class="btns-wrapper">
-          <base-button class="btn--primary btn--big sign-up"
-            >Sign Up</base-button
+          <base-button class="sign-up" link mode="primary" to="/sign-up">Sign Up</base-button
           >
-          <base-button class="btn--secondary btn--big learn-more"
-            >Learn More</base-button
+          <base-button link mode="secondary" to="/">Learn More</base-button
           >
         </div>
       </section>
@@ -28,7 +26,7 @@
   min-height: 75vh;
 }
 .hero-img {
-  height: 88%;
+  height: 40rem;
   transform: scaleX(-1);
   position: absolute;
   right: 0;
