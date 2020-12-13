@@ -21,7 +21,7 @@
 
 <style lang="scss" scoped>
 header {
-  min-height: 8rem;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,6 +31,7 @@ nav {
   font-size: 2rem;
   ul {
     display: flex;
+    align-items: center;
 
     li:not(:last-child) {
       margin-right: 2rem;

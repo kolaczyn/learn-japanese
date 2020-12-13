@@ -32,15 +32,16 @@ $btn-md: 3rem;
 $btn-bg: 4rem;
 $border: 4px;
 .btn {
+  display: inline-block;
   padding: 0.55rem 1.4rem;
+  /* padding: 1rem; */
   color: #fff;
   transition: all 225ms ease-in;
-  height: $btn-md;
   border-radius: $btn-md;
 }
 .big {
-  height: $btn-bg;
   border-radius: $btn-bg;
+  font-size: 2rem;
 }
 
 .primary {
@@ -57,9 +58,13 @@ $border: 4px;
   border: 4px solid var(--clr-primary);
   &:hover {
     border: $border solid var(--clr-primary);
-    color: #fff;
+    color: white;
     background-color: var(--clr-primary);
   }
+}
+.full-width {
+  width: 100%;
+  text-align: center;
 }
 .logo {
   color: var(--clr-primary-dark);

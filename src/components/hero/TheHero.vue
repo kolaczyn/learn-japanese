@@ -26,11 +26,12 @@
   min-height: 75vh;
 }
 .hero-img {
-  height: 40rem;
+  height: 600px;
   transform: scaleX(-1);
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }
 h1 {
   font-weight: bold;

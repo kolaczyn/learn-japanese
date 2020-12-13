@@ -1,17 +1,12 @@
 <template>
-  <the-navbar></the-navbar>
-<router-view>
-
-</router-view>
+  <router-view> </router-view>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TheNavbar from './components/navbar/TheNavbar.vue';
 
 export default defineComponent({
   name: 'App',
-  components: { TheNavbar },
 });
 </script>
 
@@ -36,7 +31,6 @@ body {
   --clr-txt: #130f40;
   --clr-txt-muted: #6a6a6a;
 
-  background-color: var(--clr-bgr-dark);
   color: var(--clr-txt);
 }
 ul {
