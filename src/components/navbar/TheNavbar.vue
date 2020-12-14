@@ -1,8 +1,7 @@
 <template>
   <base-container>
     <header>
-      <!-- I have no idea why the logo is not aligned and has a weird 'hitbox' in the dev tools -->
-      <base-button link mode="logo" to="/">Moshiro</base-button>
+      <the-logo></the-logo>
       <nav>
         <ul>
           <li><router-link to="/">About</router-link></li>

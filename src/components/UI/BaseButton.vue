@@ -71,6 +71,7 @@ $border: 4px;
   font-weight: bold;
   font-size: 3rem;
   transition: color 225ms ease;
+  padding: 0;
   &:hover {
     color: var(--clr-primary);
   }

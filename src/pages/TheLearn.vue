@@ -1,6 +1,8 @@
 <template>
   <div class="the-learn">
     <BaseBurger />
+
+    <the-navbar></the-navbar>
     <main>
       <japanese-text></japanese-text>
       <div class="grid">
@@ -17,16 +19,23 @@
 import BaseBurger from '../components/UI/BaseHamburger.vue';
 import AnswerInput from '../components/learn/AnswerInput.vue';
 import JapaneseText from '../components/learn/JapaneseText.vue';
+import TheNavbar from '../components/learn/TheSidebar.vue';
 
 export default {
-  components: { BaseBurger, AnswerInput, JapaneseText },
+  components: {
+    BaseBurger, AnswerInput, JapaneseText, TheNavbar,
+  },
+  data() {
+    return {
+      isNavbarOn: false,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .the-learn {
   background-color: var(--clr-bgr-light);
-  position: relative;
 }
 .grid {
   display: grid;
@@ -35,12 +44,11 @@ export default {
   align-items: stretch;
   grid-gap: 1.5rem;
   grid-template-areas:
-  "context answer-input meaning"
-  "context mnemonic meaning"
-  ;
+    "context answer-input meaning"
+    "context mnemonic meaning";
 }
 .answer-input {
-  grid-area: answer-input
+  grid-area: answer-input;
 }
 .context {
   grid-area: context;
