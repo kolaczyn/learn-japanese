@@ -1,16 +1,17 @@
 <template>
   <div class="the-learn">
-    <BaseBurger />
-
-    <the-navbar></the-navbar>
+    <BaseBurger :onClick="dummy" />
+    <the-sidebar :setNav="setNav" v-if="isNavbarOn"></the-sidebar>
     <main>
-      <japanese-text></japanese-text>
-      <div class="grid">
-        <answer-input class="answer-input"></answer-input>
-        <base-card class="context"></base-card>
-        <base-card class="mnemonic"></base-card>
-        <base-card class="meaning"></base-card>
-      </div>
+      <base-container>
+        <japanese-text class="japanese-text"></japanese-text>
+        <div class="grid">
+          <answer-input class="answer-input"></answer-input>
+          <base-card class="context"></base-card>
+          <base-card class="mnemonic"></base-card>
+          <base-card class="meaning"></base-card>
+        </div>
+      </base-container>
     </main>
   </div>
 </template>
@@ -19,23 +20,44 @@
 import BaseBurger from '../components/UI/BaseHamburger.vue';
 import AnswerInput from '../components/learn/AnswerInput.vue';
 import JapaneseText from '../components/learn/JapaneseText.vue';
-import TheNavbar from '../components/learn/TheSidebar.vue';
+import TheSidebar from '../components/learn/TheSidebar.vue';
 
 export default {
   components: {
-    BaseBurger, AnswerInput, JapaneseText, TheNavbar,
+    BaseBurger,
+    AnswerInput,
+    JapaneseText,
+    TheSidebar,
   },
   data() {
     return {
-      isNavbarOn: false,
+      isNavbarOn: true,
     };
+  },
+  // provide() {
+  //   return {
+  //     changeNavbarVisibility: this.changeNavbarVisibility,
+  //   };
+  // },
+  methods: {
+    setNav(val) {
+      console.log('fuck');
+      this.isNavbarOn = val;
+    },
+    dummy() {
+      console.log('dummy');
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.japanese-text {
+  margin-top: 6rem;
+}
 .the-learn {
   background-color: var(--clr-bgr-light);
+  min-height: 100vh;
 }
 .grid {
   display: grid;

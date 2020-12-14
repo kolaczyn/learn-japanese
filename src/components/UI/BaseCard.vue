@@ -1,7 +1,7 @@
 <template>
   <div class="base-card">
     <header>
-      <h3>Hello World</h3>
+      <h3>Meaning Explanation</h3>
     </header>
     <section>
       <p>

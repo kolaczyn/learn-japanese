@@ -8,7 +8,7 @@
           alt="sidebar-icon"
         />
         <!-- I'm not sure if putting a <p> tag inside of a navbar is syntactically ok -->
-        <p>
+        <p class="menu-name">
           <slot></slot>
         </p>
       </div>
@@ -26,16 +26,25 @@ export default {
 
 <style lang="scss" scoped>
 .outer-wrapper {
+  display: flex;
+
+  &:hover >  .inner-wrapper {
+  background-color: #fef5e0;
+
+  }
 }
 .inner-wrapper {
   display: flex;
   align-items: center;
   font-size: 2.25rem;
-  background-color: #fef5e0;
   border-radius: 0.75rem;
+  padding: .4rem;
+}
+.menu-name {
+  margin-right: 1.2rem;
+  margin-left: 1.2rem;
 }
 .menu-icon {
   height: 2rem;
-  margin-right: 1.2rem;
 }
 </style>

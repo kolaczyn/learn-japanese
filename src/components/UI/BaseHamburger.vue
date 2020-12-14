@@ -1,32 +1,24 @@
 <template>
-  <button class="circle">
-    <div class="burger up"></div>
-    <div class="burger mid"></div>
-    <div class="burger end"></div>
-  </button>
+  <base-circle :onClick="onClick(true)" floating>
+    <div class="line"></div>
+    <div class="line mid"></div>
+    <div class="line"></div>
+  </base-circle>
 </template>
 
-<style lang="scss" scoped>
-button {
-  border: none;
-  cursor: pointer;
-}
-.circle {
-  position: absolute;
-  filter: drop-shadow(0 4px 4px rgba(black, .25));
-  top: 2rem;
-  left: 2rem;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  background-color: var(--clr-bgr-dark);
-  /* position: relative; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.burger {
+<script>
+import BaseCircle from './BaseCircle.vue';
+
+export default {
+  components: { BaseCircle },
+  props: {
+    onClick: Function,
+  },
+};
+</script>
+
+<style>
+.line {
   width: 2rem;
   height: 4px;
   background-color: var(--clr-txt);

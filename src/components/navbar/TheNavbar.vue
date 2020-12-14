@@ -17,6 +17,10 @@
     </header>
   </base-container>
 </template>
+<script>
+export default {
+};
+</script>
 
 <style lang="scss" scoped>
 header {
