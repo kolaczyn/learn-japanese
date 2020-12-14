@@ -18,9 +18,6 @@
 
 <style lang="scss" scoped>
 .base-card {
-  /* padding-top: 10rem; */
-  max-width: 500px;
-  margin: 100px auto;
   filter: drop-shadow(0 4px 4px rgba(black, .15));
 }
 header {

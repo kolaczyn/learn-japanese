@@ -3,10 +3,12 @@
     <BaseBurger />
     <main>
       <japanese-text></japanese-text>
-      <answer-input></answer-input>
-      <base-card></base-card>
-      <base-card></base-card>
-      <base-card></base-card>
+      <div class="grid">
+        <answer-input class="answer-input"></answer-input>
+        <base-card class="context"></base-card>
+        <base-card class="mnemonic"></base-card>
+        <base-card class="meaning"></base-card>
+      </div>
     </main>
   </div>
 </template>
@@ -26,9 +28,27 @@ export default {
   background-color: var(--clr-bgr-light);
   position: relative;
 }
-main {
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: 2rem auto; */
+  grid-template-rows: repeat(2, auto);
+  align-items: stretch;
+  grid-gap: 1.5rem;
+  grid-template-areas:
+  "context answer-input meaning"
+  "context mnemonic meaning"
+  ;
+}
+.answer-input {
+  grid-area: answer-input
+}
+.context {
+  grid-area: context;
+}
+.mnemonic {
+  grid-area: mnemonic;
+}
+.meaning {
+  grid-area: meaning;
 }
 </style>
