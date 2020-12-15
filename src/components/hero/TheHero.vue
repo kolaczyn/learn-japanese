@@ -1,25 +1,38 @@
 <template>
-  <base-container>
-    <div class="hero-wrapper">
-      <section class="intro">
-        <h1>Improve your <strong>Japanese</strong></h1>
-        <p>
-          Gradually increase your knowledge of the Japanese vocabulary with
-          <strong>Moshiro</strong>.
-        </p>
-        <div class="btns-wrapper">
-          <base-button class="sign-up" link mode="primary" to="/sign-up">Sign Up</base-button
-          >
-          <base-button link mode="secondary" to="/">Learn More</base-button
-          >
-        </div>
-      </section>
-      <img src="../../assets/hero.svg" alt="Person looking at a giant phone" class="hero-img" />
-    </div>
-  </base-container>
+  <div class="the-hero">
+    <base-container>
+      <div class="hero-wrapper">
+        <section class="intro">
+          <h1>Improve your <strong>Japanese</strong></h1>
+          <p>
+            Gradually increase your knowledge of the Japanese vocabulary with
+            <strong>Moshiro</strong>.
+          </p>
+          <div class="btns-wrapper">
+            <base-button class="sign-up" link mode="primary" to="/sign-up"
+              >Sign Up</base-button
+            >
+            <base-button link mode="secondary" to="/">Learn More</base-button>
+          </div>
+        </section>
+        <img
+          src="../../assets/hero.svg"
+          alt="Person looking at a giant phone"
+          class="hero-img"
+        />
+      </div>
+    </base-container>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+.the-hero {
+  background-color: var(--clr-bgr-dark);
+}
+.intro {
+
+  z-index: 10;
+}
 .hero-wrapper {
   margin-top: 5rem;
   position: relative;
@@ -31,7 +44,7 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: -1;
+  /* z-index: 1; */
 }
 h1 {
   font-weight: bold;

@@ -43,6 +43,7 @@ p {
 .ilustrations-section {
   padding-top: 2rem;
   background-color: var(--clr-bgr-light);
+  filter: drop-shadow(0 0 4px rgba(black, 0.15));
 }
 img {
   width: 40%;
