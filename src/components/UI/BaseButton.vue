@@ -38,6 +38,9 @@ $border: 4px;
   color: #fff;
   transition: all 225ms ease-in;
   border-radius: $btn-md;
+  &:focus {
+    outline: none;
+  }
 }
 .big {
   border-radius: $btn-bg;
@@ -47,7 +50,7 @@ $border: 4px;
 .primary {
   border: $border solid var(--clr-primary);
   background-color: var(--clr-primary);
-  &:hover {
+  &:hover, &:focus {
     border: $border solid var(--clr-primary-dark);
     background-color: var(--clr-primary-dark);
   }
@@ -56,7 +59,7 @@ $border: 4px;
   color: var(--clr-primary);
   background-color: var(--clr-bgr);
   border: 4px solid var(--clr-primary);
-  &:hover {
+  &:hover, &:focus {
     border: $border solid var(--clr-primary);
     color: white;
     background-color: var(--clr-primary);

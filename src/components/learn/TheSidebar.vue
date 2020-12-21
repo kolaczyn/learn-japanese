@@ -4,7 +4,7 @@
     <header class="sidebar-header">
       <the-logo></the-logo>
       <!-- <base-hamburger></base-hamburger> -->
-      <base-exit :setNav="setNav(false)"></base-exit>
+      <base-exit></base-exit>
     </header>
     <!-- for now, to make sure the closing and opening works properly -->
     <!-- <button style="font-size: 2rem">Close</button> -->
@@ -32,7 +32,7 @@
     </ul>
   </nav>
   <teleport to="body" />
-  <div class="overlay"></div>
+  <div @click="hideNav" class="overlay"></div>
 </template>
 
 <script>
@@ -44,7 +44,8 @@ export default {
     SidebarItem,
     BaseExit,
   },
-  props: { setNav: Function },
+  inject: ['hideNav'],
+  // props: { setNav: Function },
 };
 </script>
 
@@ -75,9 +76,13 @@ export default {
   justify-content: space-between;
 }
 li:not(:last-child) {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+}
+// hardcoded for now, use flex to lay it out properly
+li:nth-child(1) {
+  margin-top: 8rem;
 }
 li:nth-child(3) {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 }
 </style>

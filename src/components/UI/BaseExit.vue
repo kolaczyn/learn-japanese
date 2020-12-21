@@ -1,6 +1,6 @@
 <template>
-<!-- in the future try making it from two divs -->
-  <base-circle @click="onClick" class="times"> &times; </base-circle>
+  <!-- in the future try making it from two divs -->
+  <base-circle :onClick="hideNav" class="times"> &times; </base-circle>
 </template>
 
 <script>
@@ -9,6 +9,7 @@ import BaseCircle from './BaseCircle.vue';
 export default {
   components: { BaseCircle },
   props: { onClick: Function },
+  inject: ['hideNav'],
 };
 </script>
 

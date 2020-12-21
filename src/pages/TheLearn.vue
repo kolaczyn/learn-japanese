@@ -1,7 +1,7 @@
 <template>
   <div class="the-learn">
-    <BaseBurger :onClick="dummy" />
-    <the-sidebar :setNav="setNav" v-if="isNavbarOn"></the-sidebar>
+    <base-burger></base-burger>
+    <the-sidebar v-if="isNavbarOn"></the-sidebar>
     <main>
       <base-container>
         <japanese-text class="japanese-text"></japanese-text>
@@ -31,21 +31,21 @@ export default {
   },
   data() {
     return {
-      isNavbarOn: true,
+      isNavbarOn: false,
     };
   },
-  // provide() {
-  //   return {
-  //     changeNavbarVisibility: this.changeNavbarVisibility,
-  //   };
-  // },
+  provide() {
+    return {
+      hideNav: this.hideNav,
+      showNav: this.showNav,
+    };
+  },
   methods: {
-    setNav(val) {
-      console.log('fuck');
-      this.isNavbarOn = val;
+    hideNav() {
+      this.isNavbarOn = false;
     },
-    dummy() {
-      console.log('dummy');
+    showNav() {
+      this.isNavbarOn = true;
     },
   },
 };

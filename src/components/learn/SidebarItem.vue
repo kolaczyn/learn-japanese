@@ -20,6 +20,10 @@
 export default {
   props: {
     icon: String,
+    color: String,
+  },
+  computed: {
+
   },
 };
 </script>
@@ -38,7 +42,9 @@ export default {
   align-items: center;
   font-size: 2.25rem;
   border-radius: 0.75rem;
-  padding: .4rem;
+  padding: .9rem .4rem;
+
+  transition: background-color 125ms ease-in;
 }
 .menu-name {
   margin-right: 1.2rem;
