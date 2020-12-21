@@ -1,10 +1,11 @@
 <template>
   <div class="icon-desc">
     <img class="icon" :src="require(`@/assets/${iconName}.svg`)" alt="" />
-    <h4>BaseIconDesc</h4>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti,
-      reprehenderit libero?
+    <h4 class="icon-header">
+      <slot name="header"></slot>
+    </h4>
+    <p class="icon-paragraph">
+      <slot name="body"></slot>
     </p>
   </div>
 </template>
@@ -23,6 +24,13 @@ export default {
 <style lang="scss" scoped>
 .icon-desc {
   text-align: center;
+  width: 18rem;
+}
+.icon-header {
+  font-size: 2rem;
+}
+.icon-paragraph {
+  font-size: 1.5rem;
 }
 img {
   max-width: 4rem;

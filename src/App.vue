@@ -10,7 +10,7 @@ export default defineComponent({
   watch: {
     $route: {
       immediate: true,
-      handler(to, from) {
+      handler(to) {
         document.title = to.meta.title || 'Moshiro';
       },
     },
@@ -27,6 +27,7 @@ export default defineComponent({
   padding: 0;
 }
 body {
+  overflow-x: hidden;
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 
   font-family: "Poppins", sans-serif;

@@ -28,13 +28,13 @@
 <style lang="scss" scoped>
 .the-hero {
   background-color: var(--clr-bgr-dark);
+  padding-bottom: 16rem;
 }
 .intro {
-
   z-index: 10;
 }
 .hero-wrapper {
-  margin-top: 5rem;
+  margin-top: 2rem;
   position: relative;
   min-height: 75vh;
 }
