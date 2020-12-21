@@ -42,7 +42,7 @@ export default {
   align-items: center;
   font-size: 2.25rem;
   border-radius: 0.75rem;
-  padding: .9rem .4rem;
+  padding: .9rem .9rem;
 
   transition: background-color 125ms ease-in;
 }

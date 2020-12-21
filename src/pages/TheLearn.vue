@@ -28,6 +28,9 @@ import JapaneseText from '../components/learn/JapaneseText.vue';
 import TheSidebar from '../components/learn/TheSidebar.vue';
 
 export default {
+  mounted() {
+    this.$store.dispatch('fetchCards');
+  },
   components: {
     BaseBurger,
     AnswerInput,
@@ -123,16 +126,15 @@ export default {
 
 /* I have no idea why the sliding doesnt work on exiting */
 .slide-in-enter-from,
-.slide-in-leave-to{
+.slide-in-leave-to {
   transform: translateX(-100%);
 }
 .slide-in-enter-active,
 .slide-in.leave-active {
-  transition: all 300ms ease-in;
+  transition: all 200ms ease-in;
 }
 .slide-in-enter-to,
 .slide-in-leave-from {
   transform: translateX(0);
 }
-
 </style>

@@ -19,6 +19,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+/* TODO */
+/* move the global styles from App.vue */
+/* https://stackoverflow.com/questions/39438094/best-way-to-have-global-css-in-vuejs */
 *,
 *::before,
 *::after {
