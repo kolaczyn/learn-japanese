@@ -1,7 +1,12 @@
 <template>
   <div class="the-learn">
     <base-burger></base-burger>
-    <the-sidebar v-if="isNavbarOn"></the-sidebar>
+    <transition name="slide-in">
+      <the-sidebar v-if="isNavbarOn"></the-sidebar>
+    </transition>
+    <transition name="fade">
+      <div v-if="isNavbarOn" @click="hideNav" class="overlay"></div>
+    </transition>
     <main>
       <base-container>
         <japanese-text class="japanese-text"></japanese-text>
@@ -38,6 +43,7 @@ export default {
     return {
       hideNav: this.hideNav,
       showNav: this.showNav,
+      isNavbarOn: this.isNavbarOn,
     };
   },
   methods: {
@@ -54,6 +60,7 @@ export default {
 <style lang="scss" scoped>
 .japanese-text {
   margin-top: 6rem;
+  margin-bottom: 3rem;
 }
 .the-learn {
   background-color: var(--clr-bgr-light);
@@ -81,4 +88,51 @@ export default {
 .meaning {
   grid-area: meaning;
 }
+@media screen and (max-width: 800px) {
+  .grid {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.overlay {
+  background-color: rgba(black, 0.35);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 1;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  background-color: transparent;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 200ms ease-out;
+}
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+}
+
+/* I have no idea why the sliding doesnt work on exiting */
+.slide-in-enter-from,
+.slide-in-leave-to{
+  transform: translateX(-100%);
+}
+.slide-in-enter-active,
+.slide-in.leave-active {
+  transition: all 300ms ease-in;
+}
+.slide-in-enter-to,
+.slide-in-leave-from {
+  transform: translateX(0);
+}
+
 </style>

@@ -1,10 +1,9 @@
 <template>
-<teleport to='body' />
+<!-- <teleport to='body' /> -->
   <nav class="sidebar">
     <header class="sidebar-header">
-      <the-logo></the-logo>
-      <!-- <base-hamburger></base-hamburger> -->
       <base-exit></base-exit>
+      <the-logo></the-logo>
     </header>
     <!-- for now, to make sure the closing and opening works properly -->
     <!-- <button style="font-size: 2rem">Close</button> -->
@@ -31,8 +30,6 @@
       </li>
     </ul>
   </nav>
-  <teleport to="body" />
-  <div @click="hideNav" class="overlay"></div>
 </template>
 
 <script>
@@ -62,18 +59,19 @@ export default {
 .sidebar {
   // for now
   min-width: 26rem;
-  padding: 1.25rem;
+  padding: 2rem;
   position: absolute;
   left: 0;
   top: 0;
   min-height: 100vh;
   background: #f5e5be;
   z-index: 10;
-  filter: drop-shadow(0 4px 4px rgba(black, 0.15));
+  filter: drop-shadow(0 0px 8px rgba(black, 0.45));
 }
 .sidebar-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 li:not(:last-child) {
   /* margin-bottom: 1rem; */
