@@ -31,10 +31,11 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
-  background-color: var(--clr-bgr-dark);
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .copyright {
   font-weight: normal;
@@ -42,7 +43,7 @@ export default {
 }
 .links {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   > *:not(:first-child) {
     margin-left: 1.5rem;
   }

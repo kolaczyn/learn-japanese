@@ -1,33 +1,25 @@
 <template>
-  <div class="the-navbar">
-    <base-container>
-      <header>
-        <the-logo></the-logo>
-        <nav>
-          <ul>
-            <li><router-link to="/">About</router-link></li>
-            <li><router-link to="/">Pricing</router-link></li>
-            <li><router-link to="/">Contact</router-link></li>
-            <li>
-              <base-button link mode="secondary" to="/log-in"
-                >Log In
-              </base-button>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </base-container>
-  </div>
+  <base-container>
+    <header>
+      <the-logo/>
+      <nav>
+        <ul>
+          <li><router-link to="/">About</router-link></li>
+          <li><router-link to="/">Pricing</router-link></li>
+          <li><router-link to="/">Contact</router-link></li>
+          <li>
+            <base-button link mode="secondary" to="/log-in">Log In </base-button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </base-container>
 </template>
 <script>
 export default {};
 </script>
 
 <style lang="scss" scoped>
-.the-navbar {
-
-  background-color: var(--clr-bgr-dark);
-}
 header {
   height: 10vh;
   display: flex;

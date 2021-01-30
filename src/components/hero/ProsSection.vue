@@ -1,12 +1,10 @@
 <template>
-  <div class="dark-bg">
-    <base-container class="wrapper">
-      <base-icon-desc v-for="{ header, body, icon } in pros" :key="header" :icon="icon">
-        <template v-slot:header>{{ header }}</template>
-        <template v-slot:body>{{ body }}</template>
-      </base-icon-desc>
-    </base-container>
-  </div>
+  <base-container class="wrapper">
+    <base-icon-desc v-for="{ header, body, icon } in pros" :key="header" :icon="icon">
+      <template v-slot:header>{{ header }}</template>
+      <template v-slot:body>{{ body }}</template>
+    </base-icon-desc>
+  </base-container>
 </template>
 
 <script>
@@ -22,9 +20,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dark-bg {
-  background-color: var(--clr-bgr-dark);
-}
 .wrapper {
   display: flex;
   justify-content: space-around;
