@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
-    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong
-        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
-        properly without JavaScript enabled. Please enable it to
-        continue.</strong
-      >
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+   <script src="https://kit.fontawesome.com/ca29e3992b.js" crossorigin="anonymous"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyDc5zLntTdb7ReasLk4dtY7-zeRSoK4p6E",
-        authDomain: "moshiro-edd9a.firebaseapp.com",
-        projectId: "moshiro-edd9a",
-        storageBucket: "moshiro-edd9a.appspot.com",
-        messagingSenderId: "239450751968",
-        appId: "1:239450751968:web:2997555e9a3c47d1586185",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-  </body>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDc5zLntTdb7ReasLk4dtY7-zeRSoK4p6E",
+      authDomain: "moshiro-edd9a.firebaseapp.com",
+      projectId: "moshiro-edd9a",
+      storageBucket: "moshiro-edd9a.appspot.com",
+      messagingSenderId: "239450751968",
+      appId: "1:239450751968:web:2997555e9a3c47d1586185",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+
 </html>

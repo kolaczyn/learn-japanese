@@ -31,6 +31,7 @@ export default {
 <style lang="scss" scoped>
 .outer-wrapper {
   display: flex;
+  height: 4rem;
 
   &:hover >  .inner-wrapper {
   background-color: #fef5e0;
@@ -40,7 +41,7 @@ export default {
 .inner-wrapper {
   display: flex;
   align-items: center;
-  font-size: 2.25rem;
+  font-size: 1.4rem;
   border-radius: 0.75rem;
   padding: .9rem .9rem;
 
@@ -51,6 +52,6 @@ export default {
   margin-left: 1.2rem;
 }
 .menu-icon {
-  height: 2rem;
+  height: 2.25rem;
 }
 </style>
