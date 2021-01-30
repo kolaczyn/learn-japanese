@@ -1,6 +1,8 @@
 <template>
   <div class="icon-desc">
-    <img class="icon" :src="require(`@/assets/${iconName}.svg`)" alt="" />
+    <span class="material-icons">
+      {{ icon }}
+    </span>
     <h4 class="icon-header">
       <slot name="header"></slot>
     </h4>
@@ -12,19 +14,16 @@
 
 <script>
 export default {
-  props: ['icon-name'],
-  computed: {
-    iconPath() {
-      return `../assets/${this.iconName}.svg`;
-    },
-  },
+  props: ['icon'],
 };
 </script>
 
 <style lang="scss" scoped>
 .icon-desc {
   text-align: center;
-  width: 18rem;
+}
+.material-icons {
+  font-size: 4rem;
 }
 .icon-header {
   font-size: 2rem;
@@ -32,10 +31,15 @@ export default {
 .icon-paragraph {
   font-size: 1.5rem;
 }
-img {
-  max-width: 4rem;
-}
-.icon {
-  height: 6rem;
+@media screen and (max-width: 1000px) {
+  .material-icons {
+    font-size: 4rem;
+  }
+  .icon-header {
+    font-size: 1.2rem;
+  }
+  .icon-paragraph {
+    font-size: 1rem;
+  }
 }
 </style>
