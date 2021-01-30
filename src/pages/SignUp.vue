@@ -2,7 +2,7 @@
 <div class="sign-up">
   <base-container>
     <div class="inner-wrapper">
-      <img class="sign-up-hero" src="../assets/account.svg" alt="Register now" />
+      <img class="img" src="../assets/account.svg" alt="Register now" />
       <sign-up-form></sign-up-form>
     </div>
   </base-container>
@@ -27,8 +27,13 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media screen and (max-width: 825px) {
+    .img {
+      display: none;
+    }
+  }
 
-  .sign-up-hero {
+  .img {
     width: 50%;
   }
 }

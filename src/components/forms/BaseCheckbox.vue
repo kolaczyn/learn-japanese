@@ -55,24 +55,36 @@ input {
 
   &::before,
   &::after {
+    transition: background 150ms ease-in;
     position: absolute;
     content: "";
     display: inline-block;
-    width: 0.1rem;
     background: white;
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
+  // outer circle
   &::before {
-    height: .6rem;
-    transform: translate(0.8rem, .3rem) rotate(45deg);
+    height: 0.85rem;
+    width: 0.85rem;
   }
+
+// inner circle
   &::after {
-    height: .6rem;
-    transform: translate(.35rem, .3rem) rotate(-45deg);
+    height: 0.55rem;
+    width: 0.55rem;
+    background-color: white;
   }
 
   &.active {
-    background-color: var(--clr-primary);
+    &::before {
+      background-color: var(--clr-primary);
+    }
+    /* background-color: var(--clr-primary); */
   }
 }
 </style>
