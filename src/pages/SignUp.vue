@@ -2,7 +2,7 @@
   <div class="sign-up">
     <base-container>
       <div class="inner-wrapper">
-        <img class="img" src="../assets/account.svg" alt="Register now" />
+        <img class="img" src="../assets/ilustrations/account.svg" alt="Register now" />
         <sign-up-form></sign-up-form>
       </div>
     </base-container>

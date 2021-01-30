@@ -4,6 +4,8 @@ import App from './App.vue';
 import router from './router';
 import store from './store/index';
 
+import './assets/css/main.css';
+
 import BaseButton from './components/UI/BaseButton.vue';
 import BaseContainer from './components/UI/BaseContainer.vue';
 import BaseIconDesc from './components/UI/BaseIconDesc.vue';

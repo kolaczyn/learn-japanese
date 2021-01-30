@@ -76,8 +76,8 @@ export default {
   align-items: stretch;
   grid-gap: 1.5rem;
   grid-template-areas:
-    "context answer-input meaning"
-    "context mnemonic meaning";
+    'context answer-input meaning'
+    'context mnemonic meaning';
 }
 .answer-input {
   grid-area: answer-input;

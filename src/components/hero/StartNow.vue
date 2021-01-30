@@ -11,10 +11,12 @@
 </template>
 
 <style lang="scss" scoped>
+.slogan {
+  text-align: center;
+}
 .start-now{
   background-color: var(--clr-bgr-light);
   filter: drop-shadow(0 0 4px rgba(black, 0.15));
   /* for now */
-  min-height: 400px;
 }
 </style>

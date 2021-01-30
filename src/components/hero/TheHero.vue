@@ -16,7 +16,7 @@
           </div>
         </section>
         <img
-          src="../../assets/hero.svg"
+          src="../../assets/ilustrations/hero.svg"
           alt="Person looking at a giant phone"
           class="hero-img"
         />
@@ -28,7 +28,6 @@
 <style lang="scss" scoped>
 .the-hero {
   background-color: var(--clr-bgr-dark);
-  padding-bottom: 16rem;
 }
 .intro {
   z-index: 10;
