@@ -1,45 +1,40 @@
 <template>
-<!-- <teleport to='body' /> -->
-  <nav class="sidebar">
-    <header class="sidebar-header">
+  <!-- <teleport to='body' /> -->
+  <aside class="sidebar">
+    <header class="header">
       <base-exit></base-exit>
       <the-logo></the-logo>
     </header>
-    <!-- for now, to make sure the closing and opening works properly -->
-    <!-- <button style="font-size: 2rem">Close</button> -->
-    <ul>
-      <li>
-        <sidebar-item icon="progress.svg" to="/">Progress</sidebar-item>
-      </li>
-      <li>
-        <sidebar-item icon="stats.svg" to="/">Stats</sidebar-item>
-      </li>
-      <li>
-        <sidebar-item icon="my-decks.svg" to="/">My Decks</sidebar-item>
-      </li>
-      <li>
-        <sidebar-item icon="notifications.svg" to="/"
-          >Notifications</sidebar-item
-        >
-      </li>
-      <li>
-        <sidebar-item icon="profile.svg" to="/">Profile</sidebar-item>
-      </li>
-      <li>
-        <sidebar-item icon="logout.svg" to="/">Logout</sidebar-item>
-      </li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+      <ul>
+        <li v-for="{ icon, to, label } in links" :key="label">
+          <sidebar-item :icon="icon" :to="to" :class="{ red: label === 'Logout' }">{{
+            label
+          }}</sidebar-item>
+        </li>
+      </ul>
+    </nav>
+    <the-footer/>
+  </aside>
 </template>
 
 <script>
+import links from '../../fixtures/sidebarLinks';
+
 import SidebarItem from './SidebarItem.vue';
 import BaseExit from '../UI/BaseExit.vue';
+import TheFooter from '../hero/TheFooter.vue';
 
 export default {
+  data() {
+    return {
+      links,
+    };
+  },
   components: {
     SidebarItem,
     BaseExit,
+    TheFooter,
   },
   inject: ['hideNav'],
   // props: { setNav: Function },
@@ -47,6 +42,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.red {
+  color: var(--clr-primary-dark);
+}
 .overlay {
   background-color: rgba(black, 0.35);
   position: absolute;
@@ -63,24 +61,26 @@ export default {
   position: absolute;
   left: 0;
   top: 0;
-  min-height: 100vh;
+  height: 100vh;
+  /* bottom: 0; */
   background: #f5e5be;
   z-index: 10;
   filter: drop-shadow(0 0px 8px rgba(black, 0.45));
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
 }
-.sidebar-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-li:not(:last-child) {
-  /* margin-bottom: 1rem; */
-}
-// hardcoded for now, use flex to lay it out properly
-li:nth-child(1) {
-  margin-top: 8rem;
+.navbar {
+  flex-grow: 1;
+  margin-top: 1.2rem;
 }
 li:nth-child(3) {
-  margin-bottom: 8rem;
+  margin-bottom: 1.2rem;
 }
 </style>

@@ -1,19 +1,16 @@
 <template>
-  <a href="#">
+  <router-link :to="to">
     <div class="outer-wrapper">
       <div class="inner-wrapper">
-        <img
-          class="menu-icon"
-          :src="require(`@/assets/sidebar/${icon}`)"
-          alt="sidebar-icon"
-        />
-        <!-- I'm not sure if putting a <p> tag inside of a navbar is syntactically ok -->
-        <p class="menu-name">
+        <span class="material-icons">
+          {{ icon }}
+        </span>
+        <section class="menu-name">
           <slot></slot>
-        </p>
+        </section>
       </div>
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script>
@@ -21,21 +18,19 @@ export default {
   props: {
     icon: String,
     color: String,
+    to: String,
   },
-  computed: {
-
-  },
+  computed: {},
 };
 </script>
 
 <style lang="scss" scoped>
 .outer-wrapper {
   display: flex;
-  height: 4rem;
+  height: 3.5rem;
 
-  &:hover >  .inner-wrapper {
-  background-color: #fef5e0;
-
+  &:hover > .inner-wrapper {
+    background-color: #fef5e0;
   }
 }
 .inner-wrapper {
@@ -43,7 +38,7 @@ export default {
   align-items: center;
   font-size: 1.4rem;
   border-radius: 0.75rem;
-  padding: .9rem .9rem;
+  padding: 0.5rem;
 
   transition: background-color 125ms ease-in;
 }
@@ -51,7 +46,5 @@ export default {
   margin-right: 1.2rem;
   margin-left: 1.2rem;
 }
-.menu-icon {
-  height: 2.25rem;
-}
+
 </style>
