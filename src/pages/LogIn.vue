@@ -1,24 +1,14 @@
 <template>
-  <h1>{{currentCount}}</h1>
-  <button @click="increase">Increase</button>
+  <account-form-body>
+    <log-in-form />
+  </account-form-body>
 </template>
 
 <script>
-export default {
-  computed: {
-    currentCount() {
-      return this.$store.getters.count;
-    },
-  },
-  methods: {
-    increase() {
-      this.$store.dispatch('increment');
-    },
-  },
+import LogInForm from '@/components/forms/LogInForm.vue';
+import AccountFormBody from '@/components/forms/AccountFormBody.vue';
 
+export default {
+  components: { LogInForm, AccountFormBody },
 };
 </script>
-
-<style>
-
-</style>
