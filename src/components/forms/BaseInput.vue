@@ -4,7 +4,14 @@
       <slot></slot>
     </label>
     <div class="input-wrapper">
-      <input class="input" :type="type" :id="id" />
+      <!-- first two attributes are setup for a custom two way binding -->
+      <input
+        @input="$emit('update:modelValue', $event.target.value)"
+        :value="modelValue"
+        class="input"
+        :type="type"
+        :id="id"
+      />
       <div class="input-shadow"></div>
     </div>
   </div>
@@ -22,6 +29,10 @@ export default {
       type: String,
       required: false,
       default: 'text',
+    },
+    modelValue: {
+      type: String,
+      required: true,
     },
   },
 };
@@ -64,7 +75,7 @@ label {
   background-color: white;
   opacity: 0;
   transition: opacity 200ms ease-in;
-  filter: drop-shadow(0 0 .8rem var(--clr-primary));
+  filter: drop-shadow(0 0 0.8rem var(--clr-primary));
 }
 .input-wrapper {
   position: relative;

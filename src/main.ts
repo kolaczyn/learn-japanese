@@ -1,4 +1,5 @@
 import { createApp } from 'vue';
+import firebase from 'firebase/app';
 
 import App from './App.vue';
 import router from './router';
@@ -14,6 +15,17 @@ import BaseLink from './components/common/BaseLink.vue';
 import BaseCard from './components/common/BaseCard.vue';
 import TheLogo from './components/common/TheLogo.vue';
 import BaseExit from './components/common/BaseExit.vue';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyDcHICfizybCuD8C2bHe-0A8VI28HvKzY0',
+  authDomain: 'learn-japanese-79a98.firebaseapp.com',
+  projectId: 'learn-japanese-79a98',
+  storageBucket: 'learn-japanese-79a98.appspot.com',
+  messagingSenderId: '385440156079',
+  appId: '1:385440156079:web:62d1d00b96873a437b875a',
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 const app = createApp(App);
 app.use(router);

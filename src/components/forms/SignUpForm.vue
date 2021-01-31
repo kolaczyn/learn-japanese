@@ -1,16 +1,16 @@
 <template>
   <div class="wrapper">
     <h2 class="header">Create Account</h2>
-    <form action.prevent="submitForm">
+    <form @submit.prevent="signUp">
       <section class="inputs">
-        <base-input type="email" id="email">Your email</base-input>
-        <base-input type="password" id="password">Your password</base-input>
-        <base-input type="password" id="confirm">Confim password</base-input>
+        <base-input type="email" v-model="email" id="email">Your email</base-input>
+        <base-input type="password" v-model="password" id="password">Your password</base-input>
+        <base-input type="password" v-model="confirmPassword" id="confirm-password"
+          >Confirm password</base-input
+        >
       </section>
       <section class="checkboxes">
-        <base-checkbox id="promotion"
-          >I want to receive promotional emails</base-checkbox
-        >
+        <base-checkbox id="promotion">I want to receive promotional emails</base-checkbox>
         <base-checkbox id="policy"
           >I agree to the
           <!-- TODO make it open in new tab -->
@@ -19,10 +19,8 @@
           <base-link to="/privacy-policty">Privacy Policy</base-link>
         </base-checkbox>
       </section>
-      <p class="did-you-know">Did you know that in Japan they use ○ instead ✓? </p>
-      <base-button link to="/learn" mode="primary full-width big" class="btn"
-        >Sign Up</base-button
-      >
+      <p class="did-you-know">Did you know that in Japan they use ○ instead of ✓?</p>
+      <base-button mode="primary full-width big" class="btn">Sign Up</base-button>
       <p>
         Already have an account?
         <base-link to="/log-in">Log in</base-link>
@@ -33,15 +31,30 @@
 </template>
 
 <script>
-// import BaseInput from '../components/forms/BaseInput.vue';
+import firebase from 'firebase';
 import BaseInput from './BaseInput.vue';
 import BaseCheckbox from './BaseCheckbox.vue';
 
 export default {
   name: 'SignUpForm',
+  data() {
+    return {
+      email: '',
+      password: '',
+      confirmPassword: '',
+    };
+  },
   methods: {
-    submitForm() {
-      console.log('submitted');
+    async signUp() {
+      try {
+        // const user = await firebase.auth().signInWithEmailAndPassword(this.email, this.password);
+        const user = await firebase
+          .auth()
+          .createUserWithEmailAndPassword(this.email, this.password);
+        console.log(user);
+      } catch (err) {
+        console.error(err);
+      }
     },
   },
   components: { BaseInput, BaseCheckbox },
@@ -64,12 +77,12 @@ export default {
 }
 
 // add equal ammount of margin between all boxes
-.checkboxes > *:not(:last-child){
+.checkboxes > *:not(:last-child) {
   margin-bottom: 1rem;
 }
 
 .btn {
-  margin-top: .85rem;
+  margin-top: 0.85rem;
   margin-bottom: 1.5rem;
 }
 
