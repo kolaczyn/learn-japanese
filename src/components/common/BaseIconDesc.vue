@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: 'BaseIconDesc',
   props: ['icon'],
 };
 </script>

@@ -12,6 +12,7 @@
 
 <script>
 export default {
+  name: 'BaseInput',
   props: {
     id: {
       type: String,

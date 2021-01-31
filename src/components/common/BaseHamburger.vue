@@ -13,6 +13,7 @@
 import BaseCircle from './BaseCircle.vue';
 
 export default {
+  name: 'BaseHamburger',
   components: { BaseCircle },
   methods: {
     // onClick() {

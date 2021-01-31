@@ -28,6 +28,12 @@
   </base-container>
 </template>
 
+<script>
+export default {
+  name: 'IlustrationsSection',
+};
+</script>
+
 <style lang="scss" scoped>
 h3 {
   font-size: 3rem;

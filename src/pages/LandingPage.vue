@@ -23,6 +23,7 @@ import StartNow from '@/components/landing-page/StartNow.vue';
 import StripedSection from '@/components/layout/StripedSection.vue';
 
 export default {
+  name: 'LandingPage',
   components: {
     TheNavbar,
     IlustrationsSection,

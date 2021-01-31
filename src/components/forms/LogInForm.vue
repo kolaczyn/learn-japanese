@@ -25,6 +25,7 @@ import BaseInput from './BaseInput.vue';
 import BaseCheckbox from './BaseCheckbox.vue';
 
 export default {
+  name: 'LogInForm',
   methods: {
     submitForm() {
       console.log('submitted');

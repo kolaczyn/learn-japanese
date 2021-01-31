@@ -21,6 +21,12 @@
   </base-container>
 </template>
 
+<script>
+export default {
+  name: 'TheHero',
+};
+</script>
+
 <style lang="scss" scoped>
 .intro {
   z-index: 10;

@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'BaseCheckbox',
   data() {
     return {
       isChecked: false,

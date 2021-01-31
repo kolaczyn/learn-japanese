@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'StripedSection',
+};
+</script>
+
 <style lang="scss" scoped>
 .stripe {
   background-color: var(--clr-bgr-light);

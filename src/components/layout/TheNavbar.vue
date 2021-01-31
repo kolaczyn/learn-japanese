@@ -15,8 +15,11 @@
     </header>
   </base-container>
 </template>
+
 <script>
-export default {};
+export default {
+  name: 'TheNavbar',
+};
 </script>
 
 <style lang="scss" scoped>

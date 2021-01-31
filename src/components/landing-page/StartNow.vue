@@ -8,6 +8,12 @@
   </base-container>
 </template>
 
+<script>
+export default {
+  name: 'StartNow',
+};
+</script>
+
 <style lang="scss" scoped>
 .slogan {
   text-align: center;

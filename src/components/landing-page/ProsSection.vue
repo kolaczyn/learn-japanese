@@ -11,6 +11,7 @@
 import pros from '@/fixtures/prosSection';
 
 export default {
+  name: 'ProsSection',
   data() {
     return {
       pros,

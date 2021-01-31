@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'BaseCirlce',
   props: {
     floating: {
       type: Boolean,

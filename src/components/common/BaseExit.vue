@@ -7,6 +7,7 @@
 import BaseCircle from './BaseCircle.vue';
 
 export default {
+  name: 'BaseExit',
   components: { BaseCircle },
   props: { onClick: Function },
   inject: ['hideNav'],

@@ -27,6 +27,7 @@ import JapaneseText from '@/components/learn/JapaneseText.vue';
 import TheSidebar from '@/components/learn/TheSidebar.vue';
 
 export default {
+  name: 'TheLearn',
   mounted() {
     this.$store.dispatch('fetchCards');
   },

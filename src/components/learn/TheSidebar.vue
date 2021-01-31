@@ -25,6 +25,7 @@ import links from '@/fixtures/sidebarLinks';
 import SidebarItem from './SidebarItem.vue';
 
 export default {
+  name: 'TheSidebar',
   data() {
     return {
       links,

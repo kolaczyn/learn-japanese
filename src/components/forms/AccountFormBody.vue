@@ -9,6 +9,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'AccountFormBody',
+};
+</script>
+
 <style lang="scss" scoped>
 .body {
   background-color: var(--clr-bgr-light);

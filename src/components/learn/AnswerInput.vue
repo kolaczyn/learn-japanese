@@ -6,6 +6,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'AnswerInput',
+};
+</script>
+
 <style lang="scss" scoped>
 .answer-input {
   filter: drop-shadow(0 4px 4px rgba(black, 0.15));

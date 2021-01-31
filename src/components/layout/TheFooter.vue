@@ -16,6 +16,7 @@
 import footerLinks from '@/fixtures/footerLinks';
 
 export default {
+  name: 'TheFooter',
   data() {
     return {
       footerLinks,

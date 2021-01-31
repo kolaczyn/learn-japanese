@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  name: 'SidebarItem',
   props: {
     icon: String,
     color: String,

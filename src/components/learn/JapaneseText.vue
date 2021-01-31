@@ -5,6 +5,12 @@
   </section>
 </template>
 
+<script>
+export default {
+  name: 'JapaneseText',
+};
+</script>
+
 <style lang="scss" scoped>
 .japanese-text {
   text-align: center;

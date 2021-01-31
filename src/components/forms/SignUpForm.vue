@@ -38,6 +38,7 @@ import BaseInput from './BaseInput.vue';
 import BaseCheckbox from './BaseCheckbox.vue';
 
 export default {
+  name: 'SignUpForm',
   methods: {
     submitForm() {
       console.log('submitted');

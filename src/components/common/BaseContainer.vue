@@ -4,6 +4,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'BaseContainer',
+};
+</script>
+
 <style scoped>
 .container {
   max-width: 1200px;

@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: 'BaseLink',
   props: {
     to: {
       type: String,

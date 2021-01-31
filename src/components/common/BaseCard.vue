@@ -16,6 +16,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'BaseCard',
+};
+</script>
+
 <style lang="scss" scoped>
 .base-card {
   filter: drop-shadow(0 4px 4px rgba(black, .15));
