@@ -1,6 +1,6 @@
 <template>
   <div class="the-learn">
-    <base-burger></base-burger>
+    <base-hamburger />
     <transition name="slide-in">
       <the-sidebar v-if="isNavbarOn"></the-sidebar>
     </transition>
@@ -22,17 +22,15 @@
 </template>
 
 <script>
-import BaseBurger from '../components/UI/BaseHamburger.vue';
-import AnswerInput from '../components/learn/AnswerInput.vue';
-import JapaneseText from '../components/learn/JapaneseText.vue';
-import TheSidebar from '../components/learn/TheSidebar.vue';
+import AnswerInput from '@/components/learn/AnswerInput.vue';
+import JapaneseText from '@/components/learn/JapaneseText.vue';
+import TheSidebar from '@/components/learn/TheSidebar.vue';
 
 export default {
   mounted() {
     this.$store.dispatch('fetchCards');
   },
   components: {
-    BaseBurger,
     AnswerInput,
     JapaneseText,
     TheSidebar,

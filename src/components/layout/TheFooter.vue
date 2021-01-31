@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import footerLinks from '../../fixtures/footerLinks';
+import footerLinks from '@/fixtures/footerLinks';
 
 export default {
   data() {

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import pros from '../../fixtures/prosSection';
+import pros from '@/fixtures/prosSection';
 
 export default {
   data() {

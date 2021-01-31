@@ -14,13 +14,13 @@
 </template>
 
 <script>
-import TheFooter from '@/components/hero/TheFooter.vue';
-import TheNavbar from '../components/navbar/TheNavbar.vue';
-import TheHero from '../components/hero/TheHero.vue';
-import IlustrationsSection from '../components/hero/IlustrationsSection.vue';
-import ProsSection from '../components/hero/ProsSection.vue';
-import StartNow from '../components/hero/StartNow.vue';
-import StripedSection from '../components/UI/StripedSection.vue';
+import TheFooter from '@/components/layout/TheFooter.vue';
+import TheNavbar from '@/components/layout/TheNavbar.vue';
+import TheHero from '@/components/landing-page/TheHero.vue';
+import IlustrationsSection from '@/components/landing-page/IlustrationsSection.vue';
+import ProsSection from '@/components/landing-page/ProsSection.vue';
+import StartNow from '@/components/landing-page/StartNow.vue';
+import StripedSection from '@/components/layout/StripedSection.vue';
 
 export default {
   components: {

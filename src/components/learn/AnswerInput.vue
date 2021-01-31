@@ -1,8 +1,8 @@
 <template>
   <div class="answer-input">
-    <button><img src="../../assets/time.svg" alt="" /></button>
+    <button><img src="../../assets/time.svg" alt="time" /></button>
     <input type="text" />
-    <button><img src="../../assets/play.svg" alt="" /></button>
+    <button><img src="../../assets/play.svg" alt="play" /></button>
   </div>
 </template>
 

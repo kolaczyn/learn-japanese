@@ -14,16 +14,15 @@
         </li>
       </ul>
     </nav>
-    <the-footer/>
+    <the-footer />
   </aside>
 </template>
 
 <script>
-import links from '../../fixtures/sidebarLinks';
-
+// import TheFooter from '../components/layout/TheFooter.vue';
+import TheFooter from '@/components/layout/TheFooter.vue';
+import links from '@/fixtures/sidebarLinks';
 import SidebarItem from './SidebarItem.vue';
-import BaseExit from '../UI/BaseExit.vue';
-import TheFooter from '../hero/TheFooter.vue';
 
 export default {
   data() {
@@ -33,11 +32,10 @@ export default {
   },
   components: {
     SidebarItem,
-    BaseExit,
     TheFooter,
   },
   inject: ['hideNav'],
-  // props: { setNav: Function },
+  props: { setNav: Function },
 };
 </script>
 
