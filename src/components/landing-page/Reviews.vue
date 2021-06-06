@@ -1,9 +1,17 @@
 <template>
-  <ul class="container">
-    <li :key="name" v-for="{ content, name, avatar } in reviews">
-      <review-card :content="content" :name="name" :avatar="avatar" />
-    </li>
-  </ul>
+  <div class="wide-container">
+    <ul class="container">
+      <li :key="name" v-for="({ content, name, avatar }, idx) in reviews">
+        <review-card
+          :class="idx % 2 ? 'odd' : 'even'"
+          class="review-card"
+          :content="content"
+          :name="name"
+          :avatar="avatar"
+        />
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -17,8 +25,7 @@ export default {
     return {
       reviews: [
         {
-          content:
-            'Have been working with CSS for over ten years and Tailwind just makes my.',
+          content: 'Have been working with CSS for over ten years and Tailwind just makes my.',
           name: 'Jad Limcaco',
           avatar: 'https://randomuser.me/api/portraits/men/61.jpg',
         },
@@ -52,9 +59,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wide-container {
+  padding: 2rem 3rem;
+  margin: 0 auto;
+}
 .container {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  transition: transform 100s;
+  transform: translateX(-100%);
+}
+.even {
+  transform: rotate(2deg);
+}
+.odd {
+  transform: rotate(-2deg);
+}
+.review-card {
+  transition: transform 120ms ease-in;
+  &:hover {
+    transform: rotate(0);
+  }
 }
 </style>

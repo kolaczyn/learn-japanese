@@ -1,17 +1,12 @@
 <template>
   <div class="base-card">
     <header class="card-header">
-      <h3>Meaning Explanation</h3>
+      <h3>
+        <slot name="header" />
+      </h3>
     </header>
     <section class="card-body">
-      <p>
-        これは、大人のりょうきんです<br />
-        This is the adult price.<br />
-        大人は三人だけです<br />
-        There are only three adults.<br />
-        大人たちはいざかやにいった<br />
-        The adults went to an izakaya.
-      </p>
+      <slot />
     </section>
   </div>
 </template>
@@ -24,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .base-card {
-  filter: drop-shadow(0 4px 4px rgba(black, .15));
+  filter: drop-shadow(0 4px 4px rgba(black, 0.15));
 }
 .card-header {
   background-color: var(--clr-bgr-dark);
@@ -32,7 +27,7 @@ export default {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   font-size: 1.5rem;
-  padding: .6rem 1.2rem
+  padding: 0.6rem 1.2rem;
 }
 .card-body {
   background-color: var(--clr-bgr-dark);
@@ -41,6 +36,5 @@ export default {
   font-size: 1.2rem;
   padding: 1.2rem;
   line-height: 1.4;
-
 }
 </style>

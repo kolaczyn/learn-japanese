@@ -12,9 +12,24 @@
         <japanese-text class="japanese-text"></japanese-text>
         <div class="grid">
           <answer-input class="answer-input"></answer-input>
-          <base-card class="context"></base-card>
-          <base-card class="mnemonic"></base-card>
-          <base-card class="meaning"></base-card>
+          <base-card class="context">
+            <template #header>
+              <h3>{{ sampleCards[0].title }}</h3>
+            </template>
+            {{ sampleCards[0].content }}
+          </base-card>
+          <base-card class="mnemonic">
+            <template #header>
+              <h3>{{ sampleCards[1].title }}</h3>
+            </template>
+            {{ sampleCards[1].content }}
+          </base-card>
+          <base-card class="meaning">
+            <template #header>
+              <h3>{{ sampleCards[2].title }}</h3>
+            </template>
+            {{ sampleCards[2].content }}
+          </base-card>
         </div>
       </base-container>
     </main>
@@ -25,6 +40,7 @@
 import AnswerInput from '@/components/learn/AnswerInput.vue';
 import JapaneseText from '@/components/learn/JapaneseText.vue';
 import TheSidebar from '@/components/learn/TheSidebar.vue';
+import sampleCards from '@/fixtures/sampleCards';
 
 export default {
   name: 'TheLearn',
@@ -39,6 +55,7 @@ export default {
   data() {
     return {
       isNavbarOn: false,
+      sampleCards,
     };
   },
   provide() {
