@@ -1,8 +1,10 @@
 <template>
   <div class="answer-input">
-    <button><img src="../../assets/time.svg" alt="time" /></button>
+    <!-- <button><img src="../../assets/time.svg" alt="time" /></button> -->
+    <button>L</button>
     <input type="text" />
-    <button><img src="../../assets/play.svg" alt="play" /></button>
+    <button>T</button>
+    <!-- <button><img src="../../assets/play.svg" alt="play" /></button> -->
   </div>
 </template>
 
@@ -15,15 +17,14 @@ export default {
 <style lang="scss" scoped>
 .answer-input {
   filter: drop-shadow(0 4px 4px rgba(black, 0.15));
+  height: 3rem;
 }
 button {
   cursor: pointer;
-  flex-basis: 3rem;
   background: white;
   border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .answer-input {
   display: flex;

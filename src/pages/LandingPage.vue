@@ -9,7 +9,7 @@
     <striped-section>
       <start-now />
     </striped-section>
-    <reviews />
+    <!-- <reviews /> -->
   </main>
   <the-footer />
 </template>
@@ -20,7 +20,7 @@ import TheNavbar from '@/components/layout/TheNavbar.vue';
 import TheHero from '@/components/landing-page/TheHero.vue';
 import IlustrationsSection from '@/components/landing-page/IlustrationsSection.vue';
 import ProsSection from '@/components/landing-page/ProsSection.vue';
-import Reviews from '@/components/landing-page/Reviews.vue';
+// import Reviews from '@/components/landing-page/Reviews.vue';
 import StartNow from '@/components/landing-page/StartNow.vue';
 import StripedSection from '@/components/layout/StripedSection.vue';
 
@@ -34,7 +34,7 @@ export default {
     ProsSection,
     StartNow,
     StripedSection,
-    Reviews,
+    // Reviews
   },
 };
 </script>
