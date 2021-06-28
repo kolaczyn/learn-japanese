@@ -33,7 +33,7 @@ export default {
 <style lang="scss" scoped>
 .wrapper {
   padding-top: 3rem;
-  /* padding-bottom: 3rem; */
+  padding-bottom: 3rem;
   text-align: center;
   max-width: 500px;
   margin: 0 auto;

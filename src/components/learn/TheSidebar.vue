@@ -14,7 +14,7 @@
         </li>
       </ul>
     </nav>
-    <the-footer />
+    <the-footer class="no-pb" />
   </aside>
 </template>
 
@@ -41,6 +41,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.no-pb {
+  padding-bottom: 0 !important;
+}
 .red {
   color: var(--clr-primary-dark);
 }

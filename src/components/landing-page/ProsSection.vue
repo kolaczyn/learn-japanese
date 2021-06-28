@@ -22,6 +22,9 @@ export default {
 
 <style lang="scss" scoped>
 .wrapper {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+
   display: flex;
   justify-content: space-around;
   & > * {
