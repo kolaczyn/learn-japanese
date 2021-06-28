@@ -1,11 +1,11 @@
 export default [
   {
-    title: 'Meaning Explanation',
+    title: 'Meaning',
     content:
       "This kanji combines big and person. If you're a child, how do you think of adults? You just think of them like big people. That's why this combination of kanji means adult.",
   },
   {
-    title: 'Reading Explanation',
+    title: 'Reading',
     content:
       '"I\'m an adult, which means I have adult responsibilities. Oh, Toner (おとな)? I need some of that for my terrible printer..." ... now feel so sad you have such a terrible printer that runs out of toner every day. Ohhhh Toner!',
   },
